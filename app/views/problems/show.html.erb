@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @problem.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @problem.description %>
+</p>
+
+<p>
+  <b>Ranking:</b>
+  <%= @problem.ranking %>
+</p>
+
+<h2>Ideas</h2>
+<% @problem.ideas.each do |idea| %>
+  <p>
+    <b>Titulo:</b>
+    <%= idea.name %>
+  </p>
+ 
+  <p>
+    <b>Descripcion:</b>
+    <%= idea.Description %>
+  </p>
+  
+  <p>
+    <b>Ranking:</b>
+    <%= idea.raking %>
+  </p>
+<% end %>
+
+<h2>Agrega una Idea:</h2>
+<%= form_for([@problem, @problem.ideas.build]) do |f| %>
+  <div class="field">
+    <%= f.label :Titulo %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :Descripcion %><br />
+    <%= f.text_area :Description %>
+  </div>
+  
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_problem_path(@problem) %> |
+<%= link_to 'Back', problems_path %>

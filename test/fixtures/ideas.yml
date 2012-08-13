@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: 
+  Description: MyString
+  raking: 1
+  problem: 
+
+two:
+  name: 
+  Description: MyString
+  raking: 1
+  problem: 
