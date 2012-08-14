@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20120813132302) do
 
   create_table "ideas", :force => true do |t|
     t.string   "name"
-    t.string   "Description"
+    t.string   "description"
     t.integer  "raking"
     t.integer  "problem_id"
     t.datetime "created_at",  :null => false

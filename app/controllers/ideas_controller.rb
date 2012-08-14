@@ -43,8 +43,6 @@ class IdeasController < ApplicationController
 	@problem = Problem.find(params[:problem_id])
     @idea = @problem.ideas.create(params[:idea])
     redirect_to problem_path(@problem)
-
-    
   end
 
   # PUT /ideas/1
